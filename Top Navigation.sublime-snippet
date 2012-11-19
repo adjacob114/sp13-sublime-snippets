@@ -1,0 +1,70 @@
+<snippet>
+	<content><![CDATA[<div data-name="TopNavigationNoFlyoutWithStartNode">
+	<!-- 
+		* Customization - Top Navigation (AjaxDelta)
+		ID: ${1:DeltaTopNavigation}
+		CssClass: ${2:ms-displayInline ms-core-navigation ms-dialogHidden}
+		BlockElement: ${3:true}
+		
+		* Customization - Top Navigation (DelegateControl)
+		ControlID: ${4:TopNavigationDataSource}
+		
+		* Customization - Top Navigation (AspMenu)
+		AdjustForShowStartingNode: ${5:false}
+		StaticDisplayLevels: ${6:2}
+		SkipLinkText: $7
+		Orientation: ${8:Horizontal} (may also choose Vertical)
+		ID: ${9:TopNavigationMenu}
+	-->
+								
+	<!--CS: Start Top Navigation Snippet-->
+	<!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+	<!--MS:<SharePoint:AjaxDelta ID="$1" BlockElement="$3" CssClass="$2" runat="server">-->
+	<!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
+	<!--PE: End of READ-ONLY PREVIEW-->
+	<!--MS:<SharePoint:DelegateControl runat="server" ControlId="$4" Id="topNavigationDelegate">-->
+	<!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
+	<span style="display:none">
+		<table cellpadding="4" cellspacing="0" style="font:messagebox;color:buttontext;background-color:buttonface;border: solid 1px;border-top-color:buttonhighlight;border-left-color:buttonhighlight;border-bottom-color:buttonshadow;border-right-color:buttonshadow">
+			<tr>
+				<td nowrap="nowrap">
+					<span style="font-weight:bold">PortalSiteMapDataSource</span>- topSiteMap</td>
+			</tr>
+			<tr>
+				<td/>
+			</tr>
+		</table>
+	</span>
+	<!--PE: End of READ-ONLY PREVIEW-->
+	<!--MS:<Template_Controls>-->
+	<!--MS:<asp:SiteMapDataSource ShowStartingNode="True" SiteMapProvider="SPNavigationProvider" ID="topSiteMap" runat="server" StartingNodeUrl="sid:1002">-->
+	<!--ME:</asp:SiteMapDataSource>-->
+	<!--ME:</Template_Controls>-->
+	<!--ME:</SharePoint:DelegateControl>-->
+	<a name="startNavigation"/>
+	<!--MS:<asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">-->
+	<!--MS:<SharePoint:AspMenu ID="$9" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&#60;%:wss,navigation_accesskey%&#62;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="$8" StaticDisplayLevels="$6" AdjustForShowStartingNode="$5" MaximumDynamicDisplayLevels="0" SkipLinkText="$7">-->
+	<!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
+	<link href="/_layouts/15/1033/styles/menu-21.css" rel="stylesheet" type="text/css"/>
+	<div class=" noindex ms-core-listMenu-horizontalBox" id="zz7_TopNavigationMenu">
+		<ul class="root ms-core-listMenu-root static" id="zz9_RootAspMenu">
+			<li class="static">
+				<a accesskey="1" class="static menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" href="/sites/wiki/Pages/Home.aspx" tabindex="0">
+					<span class="additional-background ms-navedit-flyoutArrow">
+						<span class="menu-item-text">2013 Enterprise Wiki</span>
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!--PE: End of READ-ONLY PREVIEW-->
+	<!--ME:</SharePoint:AspMenu>-->
+	<!--ME:</asp:ContentPlaceHolder>-->
+	<!--PS: Start of READ-ONLY PREVIEW (do not modify)-->
+	<!--PE: End of READ-ONLY PREVIEW-->
+	<!--ME:</SharePoint:AjaxDelta>-->
+	<!--CE: End Top Navigation Snippet-->
+</div>]]></content>
+	<tabTrigger>13tn</tabTrigger>
+	<description>13: Top Navigation</description>
+</snippet>
